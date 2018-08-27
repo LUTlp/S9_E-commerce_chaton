@@ -12,4 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *=
+
+*= require css/plugins/plugins
+*= require revolution/css/settings
+*= require revolution/css/layers
+*= require revolution/css/navigation
+*= require css/shop-style
  */
