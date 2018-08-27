@@ -6,6 +6,12 @@
     <li>
       <%= current_user.email%>
     </li>
+    <li>
+      <%= current_user.address%>
+    </li>
+    <li>
+      <%= link_to 'Edit Account', edit_user_registration_path %>
+    </li>
   <% else %>
     <li>
       <%= link_to 'sign in', new_user_session_path %>
