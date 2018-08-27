@@ -3,13 +3,25 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+
 gem 'jquery-rails','~>4.3','>=4.3.3'
+gem 'autoprefixer-rails'
+gem 'bootstrap','~> 4.1.3'
+gem 'devise', '~> 4.5'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+# gem 'devise' #1. Ensure you have defined default url options in your environments files. Here
+#      is an example of default_url_options appropriate for a development environment
+#      in config/environments/development.rb:
+#
+#        config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+#
+#      In production, :host should be set to the actual host of your application.
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

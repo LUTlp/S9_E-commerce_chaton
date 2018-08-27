@@ -13,7 +13,10 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require jquery
 //= require_tree .
+
 //= require js/plugins/plugins
 //= require js/assan.custom
 //= require revolution/js/jquery.themepunch.tools.min
