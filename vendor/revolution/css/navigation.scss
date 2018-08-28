@@ -464,14 +464,14 @@ visibility:visible;
 
 .dione .tp-bullet:hover .tp-bullet-title {
      transform:rotateX(0deg) translateX(-50%);
-    -webkit-transform:rotateX(0deg) translateX(-50%);
+    -webkit-transform:rotateX(0deg) translateX(-50%)
     opacity:1;
 }
 
 .dione .tp-bullet.selected,
 .dione .tp-bullet:hover  {
   
-   background: rgba(255,255,255,1);
+  background: rgba(255,255,255,1);
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(119,119,119,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(119,119,119,1)));
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(119,119,119,1) 100%);
@@ -642,7 +642,7 @@ website:    http://www.themepunch.com
     background: -o-linear-gradient(top,  #555555 0%,#222222 100%); /* opera 11.10+ */
     background: -ms-linear-gradient(top,  #555555 0%,#222222 100%); /* ie10+ */
     background: linear-gradient(to bottom,  #555555 0%,#222222 100%); /* w3c */
-    filter: progid:dximagetransform.microsoft.gradient( startcolorstr="#555555", endcolorstr="#222222",gradienttype=0 ); /* ie6-9 */
+    filter:unquote("progid:dximagetransform.microsoft.gradient( startcolorstr="#555555", endcolorstr="#222222",gradienttype=0 )"); /* ie6-9 */
 	padding:10px 15px;
 	margin-left:-15px;margin-top:-10px;
 	box-sizing:content-box;
@@ -667,7 +667,7 @@ background: -webkit-linear-gradient(top,  #e5e5e5 0%,#999999 100%); /* chrome10+
 background: -o-linear-gradient(top,  #e5e5e5 0%,#999999 100%); /* opera 11.10+ */
 background: -ms-linear-gradient(top,  #e5e5e5 0%,#999999 100%); /* ie10+ */
 background: linear-gradient(to bottom,  #e5e5e5 0%,#999999 100%); /* w3c */
-filter: progid:dximagetransform.microsoft.gradient( startcolorstr="#e5e5e5", endcolorstr="#999999",gradienttype=0 ); /* ie6-9 */
+filter:unquote("progid:dximagetransform.microsoft.gradient( startcolorstr="#e5e5e5", endcolorstr="#999999",gradienttype=0 )"); /* ie6-9 */
   border:1px solid #555;
   width:12px;height:12px;
 }
@@ -1805,8 +1805,8 @@ website:    http://www.themepunch.com
     background: -o-linear-gradient(top,  #999999 0%,#e1e1e1 100%); /* opera 11.10+ */
     background: -ms-linear-gradient(top,  #999999 0%,#e1e1e1 100%); /* ie10+ */
     background: linear-gradient(to bottom,  #999999 0%,#e1e1e1 100%); /* w3c */
-    filter: progid:dximagetransform.microsoft.gradient( 
-    startcolorstr="#999999", endcolorstr="#e1e1e1",gradienttype=0 ); /* ie6-9 */
+    filter:unquote("progid:dximagetransform.microsoft.gradient( 
+    startcolorstr="#999999", endcolorstr="#e1e1e1",gradienttype=0 )"); /* ie6-9 */
 	border:3px solid #e5e5e5;
 	border-radius:50%;
 	cursor: pointer;
