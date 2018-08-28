@@ -1,0 +1,12 @@
+<h1>Items#index</h1>
+<p>
+	
+	<% @item.each do |index| %>
+	<%= index.title %><br>
+	<%= index.description %><br>
+	<%= index.price %> €<br>
+</p>
+
+<img src="<%= index.image_url %>"></img><br>
+        
+<a href="/show/:id">Voir l'article</a><% end %>
