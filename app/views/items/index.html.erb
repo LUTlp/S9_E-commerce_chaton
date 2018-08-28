@@ -1,6 +1,8 @@
 <h1>Items#index</h1>
 
+
 <!------------------------- LOGIN LOGOUT ---------------------------->
+
 <ul>
   <% if user_signed_in? %>
     <li>
@@ -25,18 +27,16 @@
     <% end %>
 </ul>
 
-<!-------------------- AFFICHAGE DES ARTICLES --------------------->
-
 <p>
-	<% @items.each do |index| %>
-	<%= index.title %><br>
-	<%= index.description %><br>
-	<%= index.price %> €<br>
+
+	<% @items.each do |item| %>
+	<%= item.title %><br>
+	<%= item.description %><br>
+	<%= item.price %> €<br>
+  <%= button_to 'Ajouter au panier', line_items_path(item_id: item), class: 'btn btn-primary' %>
 </p>
 
-<img src="<%= index.image_url %>"></img><br>
-        
-<% end %>
- <!-------------------- AFFICHAGE DES ARTICLES --------------------->
+<img src="<%= item.image_url %>"></img><br>
 
+<a href="/show/:id">Voir l'article</a><% end %>
 
