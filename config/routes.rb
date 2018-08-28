@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  resources :line_items
+  resources :carts
+  resources :items
+
   root 'items#index'
   get 'items/show'
-  get '/show/:id', to: 'items#show'
+  # get '/items/:id', to: 'items#show'
 
-  devise_for :users
+
+
 
 end
