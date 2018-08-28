@@ -31,3 +31,5 @@
 //= require revolution/js/extensions/revolution.extension.parallax.min
 //= require revolution/js/extensions/revolution.extension.slideanims.min
 //= require revolution/js/extensions/revolution.extension.video.min
+//= require cubeportfolio/js/jquery.cubeportfolio.min
+//= require js/cube-thumb-slider
