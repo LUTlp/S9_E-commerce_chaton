@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 2018_08_28_095821) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "items"
+
 end

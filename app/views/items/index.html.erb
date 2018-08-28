@@ -1,5 +1,8 @@
 <h1>Items#index</h1>
 
+
+<!------------------------- LOGIN LOGOUT ---------------------------->
+
 <ul>
   <% if user_signed_in? %>
     <li>
@@ -23,6 +26,7 @@
     </li>
     <% end %>
 </ul>
+
 <p>
 
 	<% @items.each do |item| %>
@@ -35,3 +39,4 @@
 <img src="<%= item.image_url %>"></img><br>
 
 <a href="/show/:id">Voir l'article</a><% end %>
+

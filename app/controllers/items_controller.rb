@@ -3,7 +3,13 @@ class ItemsController < ApplicationController
   	@items = Item.all
   end
 
-  def show
-  	@item = Item.find(params[:id])
-  end
+#   def show
+#   	@item = Item.find(params[:id])
+#   end
+
+# private
+
+#   def items_param
+#     params.require(:item).permit(:title, :description, :price, :image_url)
+#   end
 end
