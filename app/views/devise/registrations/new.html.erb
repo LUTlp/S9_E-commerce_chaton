@@ -1,34 +1,49 @@
-<h2>Sign up</h2>
+<%= render 'items/navbar' %>
+     
+<div class="bg-parallax parallax-overlay accounts-page bg-register"  data-jarallax='{"speed": 0.2}'>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+	<div class="container">
+		<div class="row pb30 align-items-center">
+			<div class="col-lg-6 ml-md-auto col-md-6 col-sm-6 mb20" style="margin-right:auto;">
+				<h3 class="text-white text-center mb30">Rejoignez-nous</h3>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+				<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+					<%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+						<div class="field form-group">
+						<%= f.label :email %><br />
+						<%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "adresse email" %>
+						</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+						<div class="field form-group">
+						<%= f.label :password %>
+						<% if @minimum_password_length %>
+						<em>(<%= @minimum_password_length %> characters minimum)</em>
+						<% end %><br />
+						<%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "password", placeholder: "password" %>
+						</div>
 
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address, autocomplete: "address" %>
-  </div>
+						<div class="field form-group">
+						<%= f.label :password_confirmation %><br />
+						<%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "password confirmation" %>
+						</div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+						<div class="field form-group">
+						<%= f.label :address %><br />
+						<%= f.text_field :address, autocomplete: "address", class: "form-control", placeholder: "adresse" %>
+						</div>
 
-<%= render "devise/shared/links" %>
+						<div class="actions form-group">
+						<%= f.submit "Sign up", class: "form-control btn btn-rounded btn-primary btn-block" %>
+						</div>
+
+						<div class="text-center text-white-gray">Already have an account? SignIn below
+							<%= render "devise/shared/links"%>
+						</div>
+	
+				<% end %>
+				
+			</div>
+		</div>
+	</div>
+</div>

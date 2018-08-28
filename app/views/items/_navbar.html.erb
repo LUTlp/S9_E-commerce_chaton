@@ -1,0 +1,81 @@
+        <!--top bar-->
+        <div class='top-bar clearfix light'>
+            <div class='container'>
+                <div class='float-sm-right'>
+                    <ul class='list-inline mb0'>
+                        <li class='list-inline-item'>
+                            <a href="#" class="social-icon-sm si-gray si-gray-round si-facebook">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li class='list-inline-item'>
+                            <a href="#" class="social-icon-sm si-gray si-gray-round si-twitter">
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class='list-inline-item'>
+                            <a href="#" class="social-icon-sm si-gray si-gray-round si-instagram">
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class='list-inline-item'>
+                            <a href="#" class="social-icon-sm si-gray si-gray-round si-g-plus">
+                                <i class="fa fa-google-plus"></i>
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class='float-sm-left'>
+                    <ul class='list-inline mb0 links'>
+                      <% if user_signed_in? %>
+                       	<li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete%></li>
+												<li><%= current_user.email%></li>
+												<li><%= current_user.address%></li>
+												<li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+                      <% else %> 	
+                        <li class='list-inline-item'><%= link_to 'sign in', new_user_session_path %></li>
+                        <li class='list-inline-item'><%= link_to 'sign up', new_user_registration_path %></li>
+                      <% end %>  
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end top bar-->
+        
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-faded">
+ <div class="search-inline">
+                <form>
+                    <input type="text" class="form-control" placeholder="Type and hit enter...">
+                    <button type="submit"><i class="ti-search"></i></button>
+                    <a href="javascript:void(0)" class="search-close"><i class="ti-close"></i></a>
+                </form>
+            </div><!--/search form-->
+            <div class="container">
+
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><logo class="logo" style="font-size: 30px; font-weight: bold;">Boules de Poils</logo></a>
+                <div  id="navbarNavDropdown" class="navbar-collapse collapse">
+									<ul class="navbar-nav ml-auto">
+										<li class="nav-item active dropdown">
+												<%=link_to 'Home', root_path, class: "nav-link"%>
+										</li>
+										<!-- ici pour rajouter les categories -->
+									</ul>        
+                </div>
+                <div class=" navbar-right-elements">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="search-open"><i class="ti-search"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class=" menu-btn"><i class="ti-shopping-cart"></i> <span class="badge badge-default">0</span></a></li>
+                    </ul>
+                </div><!--right nav icons-->
+                
+            </div>
+        </nav>

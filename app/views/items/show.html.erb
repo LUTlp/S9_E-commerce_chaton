@@ -1,10 +1,213 @@
-<h1>Items#show</h1>
-<p>
-	
-	<%= @item.title %><br>
-	<%= @item.description %><br>
-	<%= @item.price %> €<br>
-	<img src="<%= @item.image_url %>"></img>
 
-</p>
+<%= render "navbar" %> 
+           
+           <div class="container pt90 pb60">
+            <div class='row align-items-center'>
+                <div class='col-md-7'>
+                    <div id="thumbnail">
+                      <%= image_tag("shop/p1.jpg", size: "600x333", alt: "p1") %>          
+                    </div>
+                </div>
+                <div class='col-md-5'>
+                    <h2>Chaton tigré Européen</h2>
+                    <div class='clearfix mb30'>
+                        <span class='float-right'>
+                            <i class='fa fa-star text-warning'></i>
+                            <i class='fa fa-star text-warning'></i>
+                            <i class='fa fa-star text-warning'></i>
+                            <i class='fa fa-star text-warning'></i>
+                            <i class='fa fa-star-half-full text-warning'></i>
+                            (12 Reviews)
+                        </span>
+                        <h4 class='text-info'>€79.00</h4>
+                    </div>
+                    <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                    </p>
+                    <form method="post" class="pt20">
+                        <h4><small>Quantity</small></h4>
+                        <div class="quantity">                            
+                            <input type="button" class="minus" value="-">
+                            <input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                            <input type="button" class="plus" value="+">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-icon">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row pt70">
+                <div class="col-md-10 ml-auto mr-auto">
+                    <div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs tabs-default justify-content-center mb30" role="tablist">
+                            <li class="nav-item" role="presentation"><a class="active nav-link" href="#t3" aria-controls="#t3" role="tab" data-toggle="tab"> Description</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#t4" aria-controls="#t4" role="tab" data-toggle="tab"> Additional Information</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#t5" aria-controls="#t5" role="tab" data-toggle="tab"> Feedback <sup>2</sup></a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active show fade" id="t3">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="t4">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr><th>
+                                                Size:
+                                            </th>
+                                            <td>
+                                                Unique
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Colors
+                                            </th>
+                                            <td>
+                                                Sky Blue, Green, Red
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Material
+                                            </th>
+                                            <td>
+                                                100% Leather
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>    
+                            <div role="tabpanel" class="tab-pane show fade" id="t5">
+                                <div class="media mb40">
+                                    <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
+                                    <div class="media-body">
+                                        <h5 class="mt-0 clearfix">
+                                            <span class="float-right">
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star-half-full  text-warning"></i>
+                                            </span>
+                                            Jane Doe</h5>
+                                        Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                    </div>
+                                </div>
+                                <div class="media mb40">
+                                    <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
+                                    <div class="media-body">
+                                        <h5 class="mt-0 clearfix">
+                                            <span class="float-right">
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star-half-full  text-warning"></i>
+                                            </span>
+                                            Jane Doe</h5>
+                                        Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                    </div>
+                                </div><!--/review-->
+                                <hr class="mb40">
+                                <div class="title-heading1">
+                                    <h3>Add Feedback</h3>
+                                </div>
+                                    <div class="smart-forms feedback-form smart-container wrap-1">
+
+                                        <form method="post" action="http://bootstraplovers.com/" id="feedback">
+                                            <div class="form-body">
+
+                                                <div class="frm-row">
+
+                                                    <div class="section colm colm6">
+                                                        <label class="field prepend-icon">
+                                                            <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="First name...">
+                                                            <span class="field-icon"><i class="fa fa-user"></i></span>  
+                                                        </label>
+                                                    </div><!-- end section -->
+
+                                                    <div class="section colm colm6">
+                                                        <label class="field prepend-icon">
+                                                            <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Last name...">
+                                                            <span class="field-icon"><i class="fa fa-user"></i></span>  
+                                                        </label>
+                                                    </div><!-- end section --> 
+
+                                                </div><!-- end frm-row section -->
+
+                                                <div class="section">
+                                                    <label class="field prepend-icon">
+                                                        <input type="text" name="company" id="company" class="gui-input" placeholder="Company">
+                                                        <span class="field-icon"><i class="fa fa-building-o"></i></span>  
+                                                    </label>
+                                                </div><!-- end section -->                    
+
+                                                <div class="section">
+                                                    <label class="field prepend-icon">
+                                                        <input type="email" name="email" id="email" class="gui-input" placeholder="Email address">
+                                                        <span class="field-icon"><i class="fa fa-envelope"></i></span>  
+                                                    </label>
+                                                </div><!-- end section -->                    
+
+                                                <div class="section">
+                                                    <label class="field prepend-icon">
+                                                        <input type="tel" name="mobile" id="mobile" class="gui-input" placeholder="Moble contact">
+                                                        <span class="field-icon"><i class="fa fa-phone-square"></i></span>  
+                                                    </label>
+                                                </div><!-- end section --> 
+                                                <div class="section">
+                                                    <label class="field prepend-icon">
+                                                        <textarea class="gui-textarea" id="comment" name="comment" placeholder="Feedback message"></textarea>
+                                                        <span class="field-icon"><i class="fa fa-comments"></i></span>
+                                                        <span class="input-hint"> <strong>Hint:</strong> Please enter between 80 - 300 characters.</span>   
+                                                    </label>
+                                                </div><!-- end section -->
+
+                                                <div class="spacer spacer-b20"></div> 
+
+                                                <div class="section">
+
+                                                    <span class="rating block">
+
+                                                        <span class="lbl-text">Rate this product</span>
+
+                                                        <input class="rating-input" id="five-stars" type="radio"  name="product-rate">
+                                                        <label class="rating-star" for="five-stars"><i class="fa fa-star"></i></label>
+
+                                                        <input class="rating-input" id="four-stars" type="radio"  name="product-rate">
+                                                        <label class="rating-star" for="four-stars"><i class="fa fa-star"></i></label>
+
+                                                        <input class="rating-input" id="three-stars" type="radio"  name="product-rate" checked>
+                                                        <label class="rating-star" for="three-stars"><i class="fa fa-star"></i></label>
+
+                                                        <input class="rating-input" id="two-stars" type="radio"  name="product-rate">
+                                                        <label class="rating-star" for="two-stars"><i class="fa fa-star"></i></label>
+
+                                                        <input class="rating-input" id="one-star" type="radio"  name="product-rate">
+                                                        <label class="rating-star" for="one-star"><i class="fa fa-star"></i></label>
+
+                                                    </span>
+                        
+
+                                                </div><!-- end  section -->
+
+
+                                            </div><!-- end .form-body section -->
+                                          
+                                              <div class='pt20 pb20'>
+                                                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                                            
+                                              </div>
+                                        </form>
+
+                                    </div><!-- end .smart-forms section -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
