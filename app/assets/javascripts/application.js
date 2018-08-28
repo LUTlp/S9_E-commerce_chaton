@@ -18,6 +18,7 @@
 //= require_tree .
 
 //= require js/plugins/plugins
+//= require js/gmaps.min
 //= require js/assan.custom
 //= require revolution/js/jquery.themepunch.tools.min
 //= require revolution/js/jquery.themepunch.revolution.min

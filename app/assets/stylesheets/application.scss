@@ -19,5 +19,13 @@
 *= require revolution/css/layers
 *= require revolution/css/navigation
 *= require css/shop-style
+*= require css/style
  */
 @import "bootstrap";
+
+.bg-register{
+	background-image: url(../assets/bg6.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
