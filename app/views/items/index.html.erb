@@ -27,14 +27,17 @@
 
 <!-------------------- AFFICHAGE DES ARTICLES --------------------->
 
-<p>
-	<% @items.each do |index| %>
-	<%= index.title %><br>
-	<%= index.description %><br>
-	<%= index.price %> €<br>
-</p>
 
-<img src="<%= index.image_url %>"></img><br>
+<% @items.each do |item| %>
+
+	<p>
+		<%= item.title %><br>
+		<%= item.description %><br>
+		<%= item.price %> €<br>
+	</p>
+
+	<img src="<%= item.image_url %>"></img><br>
+	<%= link_to "Afficher article", item_path(item.id) %>
         
 <% end %>
  <!-------------------- AFFICHAGE DES ARTICLES --------------------->
