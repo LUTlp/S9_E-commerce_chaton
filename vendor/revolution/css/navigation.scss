@@ -800,8 +800,8 @@ website:    http://www.themepunch.com
     background: -o-linear-gradient(top,  #777777 0%,#666666 100%); 
     background: -ms-linear-gradient(top,  #777777 0%,#666666 100%); 
     background: linear-gradient(to bottom,  #777777 0%,#666666 100%); 
-    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr="#777777", 
-    endColorstr="#666666",GradientType=0 )"; 
+    filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr="#777777", 
+    endColorstr="#666666",GradientType=0 )"); 
 	padding:10px;
 	margin-left:-10px;margin-top:-10px;
 	box-sizing:content-box;
