@@ -5,15 +5,17 @@
 	<div class="row">
 		<% @items.first(8).each do |item| %>
 			<div class="col-md-6 col-lg-3 mb40">
-				<a href="/show/:id" class="simple-hover">
-					<img src="<%= item.image_url %>" alt="" class="img-fluid">
-				</a>
-				<div class="clearfix product-meta">
-					<p class="lead mb0"><a href="/show/:id"><%= item.title %></a></p>
-					<h4 class=""><%= item.price %> €</h4><span>  <%= button_to 'Ajouter au panier', line_items_path(item_id: item), class: 'btn btn-success' %></span>
-					<%= link_to "Afficher article", item_path(item.id) %>
-				</div>
-		 	</div><!--/col-->
+				<%= link_to item_path(item.id) do %>
+					<p class="simple-hover">
+						<img src="<%= item.image_url %>" alt="" class="img-fluid">
+					</p>
+					<div class="clearfix product-meta">
+						<p class="lead mb0"><%= item.title %></p>
+						<%end%>
+						<h4 class=""><%= item.price %> €</h4><span>  <%= button_to 'Ajouter au panier', line_items_path(item_id: item), class: 'btn btn-success' %></span>
+					</div>
+
+			</div><!--/col-->
 		<% end %>
 	</div>
 </div>
