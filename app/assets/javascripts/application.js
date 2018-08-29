@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require jquery
+//= require jquery_ujs
 //= require_tree .
 
 //= require js/plugins/plugins
@@ -33,3 +34,4 @@
 //= require revolution/js/extensions/revolution.extension.video.min
 //= require cubeportfolio/js/jquery.cubeportfolio.min
 //= require js/cube-thumb-slider
+
