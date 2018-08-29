@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  root 'items#index'  
+
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }  
+
   resources :line_items
   resources :carts
   resources :items
-
-  root 'items#index'  
-  get 'items/show'
 
 end
