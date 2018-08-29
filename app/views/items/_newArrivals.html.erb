@@ -12,7 +12,8 @@
 					<div class="clearfix product-meta">
 						<p class="lead mb0"><%= item.title %></p>
 						<%end%>
-						<h4 class=""><%= item.price %> €</h4><span>  <%= button_to 'Ajouter au panier', line_items_path(item_id: item), class: 'btn btn-success' %></span>
+						<h4 class=""><%= item.price %> €</h4>
+						<span><%= button_to 'Ajouter au panier', line_items_path(item_id: item), class: 'btn btn-success' %></span>
 					</div>
 
 			</div><!--/col-->

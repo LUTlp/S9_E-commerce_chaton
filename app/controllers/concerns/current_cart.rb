@@ -1,8 +1,6 @@
 module CurrentCart
   extend ActiveSupport::Concern
 
-
-
   private
 
   def set_cart #find the cart of the logged user else it create one!
