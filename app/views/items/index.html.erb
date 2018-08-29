@@ -1,7 +1,24 @@
-<%= render 'slider' %>       
-<%= render 'newArrivals' %>        
-		
-<%= content_for(:end_script) do %>		
+
+
+
+<%= render 'navbar' %>
+<%= render 'slider' %>
+<!--
+<h3>
+	<#%= current_user.cart_id %>
+	<#%= session[:cart_id] %>
+
+
+
+</h3>
+
+-->
+
+
+
+<%= render 'newArrivals' %>
+
+<%= content_for(:end_script) do %>
 	<script>
             /**Hero  script**/
             var tpj = jQuery;
@@ -82,6 +99,9 @@
                     });
                 }
             });	/*ready*/
-          
-        </script> 
+
+
+
+        </script>
 <% end %>
+
