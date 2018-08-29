@@ -12,6 +12,8 @@ class CartsController < ApplicationController
   def show
   end
 
+  rescue_from ActiveRecord::RecordNotFound, with: :cart_not_found
+
   # GET /carts/new
   def new
     @cart = Cart.new
@@ -70,5 +72,10 @@ class CartsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def cart_params
       params.fetch(:cart, {})
+    end
+
+
+    def cart_not_found
+      redirect_to root_url, alert: t(".cart_not_found")
     end
 end
