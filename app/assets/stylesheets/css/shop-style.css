@@ -417,7 +417,7 @@ strong, b {
     display: table; } }
 
 .bg1 {
-  background: url(../assets/bg1.jpg) no-repeat; }
+  background: url(../images/bg2.jpg) no-repeat; }
 
 .col-grid {
   padding: 10px 15px;
@@ -1363,7 +1363,7 @@ Top bar style
     width: 1px;
     height: 30%;
     top: 35%;
-    background: rgba(0, 0, 0, 0.1);}
+    background: rgba(0, 0, 0, 0.1); }
   .links .list-inline-item:last-child:before {
     display: none; }
   .links .list-inline-item:first-child {
@@ -2259,16 +2259,6 @@ Page title styles
 /*
 Breadcrumb style
 */
-.breadcrum{
-	 background: transparent;
-  padding: 0px;
-	float: right;}
-  .breadcrum .breadcrumb-item {
-		color: #fff;
-    float: none;
-    display: inline-block;
-    padding-left: 5px; }
-
 .breadcrumb {
   background: transparent;
   padding: 0px;
