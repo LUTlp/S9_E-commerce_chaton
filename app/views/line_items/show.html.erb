@@ -10,10 +10,14 @@
 
 <div class="container pb60">
 	<h4 class="font300 mb30">
-		<a href="#" class="btn btn-dark float-right">Vider le Panier</a>
+		<div class="col">
+  		<%= button_to "Vider le panier", @cart, method: :delete, data: {
+   		confirm: "Êtes-vous sûr ?" }, class: "btn btn-dark float-right" %>
+    </div>
+    
 		vous avez ... articles dans votre panier
 	</h4>
-	
+	 
 	<table class="table table-condensed cart-table mb40">
 		<thead>
 			<tr>
@@ -27,19 +31,22 @@
 		
 		<tbody>
 			<tr>
-				<td class="product-image">
-					<%= image_tag("shop/p1.jpg", alt: "p1", size:100) %>
-				</td>
-				<td class="product-name"><%= link_to "#non du chat", items_show_path %></td>
-				<td class="product-price">$299.00</td>
-				<td class="product-quantity">
-					<input type="number" value="1" min="1" class="fl qty-text" name="quantity">
-				</td>
-				<td class="product-total">
-					$299.00
-				</td>
-				<td class="product-delete"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove this item"><i class="fa fa-times"></i></a></td>
+				<% @cart.line_items.each do |ssss| %>
+					<td class="product-image">
+						<%= image_tag("shop/p1.jpg", alt: "p1", size:100) %>
+					</td>
+					<td class="product-name"><%= ssss.item.title %></td>
+					<td class="product-price">(x <%= ssss.quantity %>)</td>
+					<td class="product-quantity">
+						
+					<td class="product-total">
+						
+					</td>
+				<% end %>
+					<td class="product-delete"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove this item"><i class="fa fa-times"></i></a></td>
 			</tr>
+			
+			
 			<tr>
 				<td class="product-image">
 					<%= image_tag("shop/p1.jpg", alt: "p1", size:100) %>
