@@ -11,16 +11,16 @@
 <div class="container pb60">
 	<h4 class="font300 mb30">
 		<a href="#" class="btn btn-dark float-right">Vider le Panier</a>
-		You have 3 items in your cart
+		vous avez ... articles dans votre panier
 	</h4>
 	
 	<table class="table table-condensed cart-table mb40">
 		<thead>
 			<tr>
 				<th></th>
-				<th>Product</th>
-				<th>Price</th>
-				<th>Quantity</th>
+				<th>Produit</th>
+				<th>Prix</th>
+				<th>Quantité</th>
 				<th>Total</th>
 			</tr>
 		</thead>
@@ -30,7 +30,7 @@
 				<td class="product-image">
 					<%= image_tag("shop/p1.jpg", alt: "p1", size:100) %>
 				</td>
-				<td class="product-name"><a href="#">Men's Backpack</a></td>
+				<td class="product-name"><%= link_to "#non du chat", item_show_path %></td>
 				<td class="product-price">$299.00</td>
 				<td class="product-quantity">
 					<input type="number" value="1" min="1" class="fl qty-text" name="quantity">
