@@ -9,9 +9,8 @@
 					<img src="<%= item.image_url %>" alt="" class="img-fluid">
 				</a>
 				<div class="clearfix product-meta">
-
 					<p class="lead mb0"><a href="/show/:id"><%= item.title %></a></p>
-					<h4 class=""><%= item.price %> €</h4><span><bouton class="btn btn-success">Ajouter au panier</bouton></span>
+					<h4 class=""><%= item.price %> €</h4><span> <%= button_to 'Ajouter au panier', line_items_path(item_id: item), class: 'btn btn-success' %></span> 
 				</div>
 		 	</div><!--/col-->
 		<% end %>
