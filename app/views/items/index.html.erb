@@ -118,17 +118,21 @@
     <% end %>
 </ul>
 
-<p>
+<!-------------------- AFFICHAGE DES ARTICLES --------------------->
 
-	<% @items.each do |item| %>
-	<%= item.title %><br>
-	<%= item.description %><br>
-	<%= item.price %> €<br>
+
+<% @items.each do |item| %>
+
+	<p>
+		<%= item.title %><br>
+		<%= item.description %><br>
+		<%= item.price %> €<br>
+	</p>
+
+	<img src="<%= item.image_url %>"></img><br>
   <%= button_to 'Ajouter au panier', line_items_path(item_id: item), class: 'btn btn-primary' %>
-</p>
-
-<img src="<%= item.image_url %>"></img><br>
-
-<a href="/show/:id">Voir l'article</a><% end %>
+	<%= link_to "Afficher article", item_path(item.id) %>
+        
+<% end %>
 
 
