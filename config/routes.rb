@@ -5,11 +5,7 @@ Rails.application.routes.draw do
   resources :carts
   resources :items
 
-  root 'items#index'
+  root 'items#index'  
   get 'items/show'
-  # get '/items/:id', to: 'items#show'
-
-
-
 
 end
