@@ -14,6 +14,7 @@
    <div class="col"><%= button_to "Vider le panier", @cart, method: :delete, data: {
    confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger" %></div>
 </div>
-
+<div>
+<%= button_to "Acheter", new_order_path, method: :get, class: "btn btn-primary" %></div>
      <%= link_to 'Edit', edit_cart_path(@cart) %>
 <p id="notice"><%= notice %></p>
