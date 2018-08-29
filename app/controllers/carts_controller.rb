@@ -12,6 +12,8 @@ class CartsController < ApplicationController
   def show
   end
 
+  rescue_from ActiveRecord::RecordNotFound, with: :cart_not_found
+
   # GET /carts/new
   def new
     @cart = Cart.new
@@ -53,10 +55,12 @@ class CartsController < ApplicationController
 
   # DELETE /carts/1
   # DELETE /carts/1.json
+  #return unless @cart.id == session[:cart_id]
   def destroy
     @cart.destroy
+    session.delete(:cart_id)
     respond_to do |format|
-      format.html { redirect_to carts_url, notice: 'Cart was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Votre panier est vide'}
       format.json { head :no_content }
     end
   end
@@ -70,5 +74,10 @@ class CartsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def cart_params
       params.fetch(:cart, {})
+    end
+
+
+    def cart_not_found
+      redirect_to root_url, alert: t(".cart_not_found")
     end
 end
