@@ -15,5 +15,4 @@ Rails.application.routes.draw do
   get 'items/show'
   get '/items/:id', to: 'items#show'
 
-
 end
