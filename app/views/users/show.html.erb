@@ -1,4 +1,36 @@
+<div class="container_box">
+	<h2>Mon Compte</h2>
+		<div>
+			<ul class="bloc_name">
+				<h4>Email</h4>
+				<li><%= current_user.email%></li>
+				<br>
+				<h4>Adresse</h4>
+				<li><%= current_user.address%></li>
+			</ul>	
+		</div>
 
+	<table id="data-table" class="table mb-0 table-striped" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th>Id_commande</th>
+					<th>Montant</th>
+					<th>Statut</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>75 €</td>
+					<td>Validé</td>														
+				</tr>
 
-<li><%= current_user.email%></li>
-<li><%= current_user.address%></li>
+				 <tr>
+					<td>2</td>
+					<td>120 €</td>
+					<td>En attente</td>
+				</tr>
+			</tbody>
+	</table>
+
+</div>
