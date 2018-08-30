@@ -6,14 +6,12 @@ Rails.application.routes.draw do
   
 
   resources :orders
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
   resources :line_items
   resources :carts
   resources :items
 
 
-  devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations'
-  }  
-
-end

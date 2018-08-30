@@ -59,13 +59,15 @@ class CartsController < ApplicationController
   # DELETE /carts/1.json
   #return unless @cart.id == session[:cart_id]
   def destroy
+    return unless @cart.id == session[:cart_id] #check that the cart for the current order is the cart of the session opened
     @cart.destroy
-    session.delete(:cart_id)
+    session.delete(:cart_id) #delete the key cart_id and the value of the cart_id of the current session
     respond_to do |format|
       format.html { redirect_to root_url, notice: 'Votre panier est vide'}
       format.json { head :no_content }
     end
   end
+
 
   private
 
@@ -73,7 +75,6 @@ class CartsController < ApplicationController
     def cart_params
       params.fetch(:cart, {})
     end
-
 
     def cart_not_found
       redirect_to root_url, alert: t(".cart_not_found")
