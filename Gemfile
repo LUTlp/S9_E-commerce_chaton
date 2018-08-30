@@ -18,6 +18,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'font-awesome-sass', '~> 5.3.1'
+gem 'stripe', '~> 1.57', '>= 1.57.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
