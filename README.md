@@ -54,6 +54,8 @@ Features en plus
  :sunny:   $ bundle install
 
  :sunny:   $ rails db:migrate
+ 
+ :sunny:   $ rails db:seed
 
 
 
