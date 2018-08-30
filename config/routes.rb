@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  
+
   root 'items#index'
   get 'items/show'
   get '/items/:id', to: 'items#show', as: 'item' # resources :items, only: [:show]
-  
+  delete 'line_items/:id' => "line_items#destroy"
 
   resources :orders
   devise_for :users, controllers: {
@@ -18,8 +18,4 @@ Rails.application.routes.draw do
   resources :carts
   resources :items
 
-
-
-
 end
-
