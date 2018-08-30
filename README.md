@@ -36,11 +36,11 @@
  - En tant qu'utilisateur authentifié, je peux voir mon panier actuel (et le modifier ?.........?)
  - En tant qu'utilisateur, je peux passer une commande avec Stripe (.............?)
  - Le mailer envoie un email 
-                            - à l'utilisateur 
-                                     - lors de l'inscription
-                                     - d'une commande passée
-                            - à l'administrateur
-                                     - d'une commande passée
+                            - à l'utilisateur </br>
+                                     - lors de l'inscription </br>
+                                     - d'une commande passée </br>
+                            - à l'administrateur </br>
+                                     - d'une commande passée</br>
                                               
  - En tant qu'utilisateur, je peux modifier mes informations de base
  
