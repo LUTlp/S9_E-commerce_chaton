@@ -24,6 +24,9 @@ group :development, :test do
 	gem 'pry-rails', '~> 0.3.6'
 end
 
+gem 'dotenv-rails', groups: [:development, :test]
+gem "letter_opener", :group => :development
+
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'

@@ -1,8 +1,11 @@
 class OrdersController < ApplicationController
+<<<<<<< HEAD
+=======
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
   before_action :redirect_if_cart_is_empty, only: :new
+  before_action :set_order, only: [:show, :edit, :update, :destroy]
+
   # GET /orders
   # GET /orders.json
   def index
@@ -26,13 +29,14 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
-    @order.cart = @cart
+
+      @order = Order.new(order_params)
+      @order.cart = @cart #bind the current cart to the the current order
 
     respond_to do |format|
       if @order.save
-        session.delete(:cart_id)
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        session.delete(:cart_id) #delete the cart_id of the current cookies, then will generate a new one automatically
+        format.html { redirect_to @order, notice: 'Commande validée.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -73,12 +77,13 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :status, :cart_id)
+      params.require(:order).permit(:name, :address, :email)
     end
 
     def redirect_if_cart_is_empty
       if @cart.line_items.empty?
-        redirect_to root_url, notice: "Votre panier est vide"
+        redirect_to root_url, notice: "Votre panier est vide."
       end
     end
+>>>>>>> 333e9a2b269a356f5af9e0df4c9f54cd73d3c8ba
 end

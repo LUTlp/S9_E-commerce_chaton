@@ -1,7 +1,7 @@
 require_relative 'boot'
-
 require 'rails/all'
-require 'devise' 
+require 'devise'
+require 'dotenv/load' 
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -18,3 +18,9 @@ module ECommerceChatons
     # the framework and any gems in your application.
   end
 end
+
+
+# config.fog_directory  = ENV['S3_BUCKET']
+# puts ENV['S3_BUCKET']
+
+
