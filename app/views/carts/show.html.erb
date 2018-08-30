@@ -12,8 +12,11 @@
 <div class="container pb60">
 	<h4 class="font300 mb30">
 		<div class="col">
-  		<%= button_to "Vider le panier", @cart, method: :delete, data: {
-   		confirm: "Êtes-vous sûr ?" }, class: "btn btn-dark float-right" %>
+			<%= link_to empty_cart_path(cart_id: @cart.id) do %>
+	  		<div class="btn btn-dark float-right">
+	    		Vider le panier
+	  		</div>
+			<% end %>
     </div>
 
 		Vous avez <%= @cart.line_items.count%> article(s) dans votre panier.

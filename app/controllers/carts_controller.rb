@@ -68,6 +68,10 @@ class CartsController < ApplicationController
     end
   end
 
+  def empty_cart
+    LineItem.where(cart_id: params[:cart_id]).destroy_all
+    redirect_back fallback_location: { action: "show", id: params[:cart_id] }
+  end
 
   private
 
