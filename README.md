@@ -1,6 +1,6 @@
 # Un site d'e-commerce de vente de chats. :octocat:
  *en ligne sur Heroku* </br></br></br>
- https://ecommercechatonbnf.herokuapp.com/ 
+ # https://ecommercechatonbnf.herokuapp.com/ 
  
 
 ### Salut les mouss'!  :sunglasses:
@@ -69,7 +69,7 @@
 </br>
 ==================================================================================================
 
-###Le Mailer:
+### Le Mailer:
  
   - généré par ChatonMailer 
   - les méthodes ” order_mail ” (=> envoi un mail lors d’une commande) et “welcome_mail” (=> envoi un mail au new subscriber).
