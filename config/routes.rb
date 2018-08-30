@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/items/:id', to: 'items#show', as: 'item' # resources :items, only: [:show]
   delete 'line_items/:id' => "line_items#destroy"
 
-  resources :orders
+  resources :orders, only: [:show, :new, :create]
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   resources :line_items
   resources :carts
   resources :items
+  resources :charges, only: [:new, :create]
 
 end
