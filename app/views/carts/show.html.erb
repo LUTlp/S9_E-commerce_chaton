@@ -18,7 +18,7 @@
    		confirm: "Êtes-vous sûr ?" }, class: "btn btn-dark float-right" %>
     </div>
 
-		vous avez ... articles dans votre panier
+		Vous avez <%= @cart.line_items.count%> article(s) dans votre panier.
 
 	</h4>
 
@@ -55,7 +55,7 @@
 
 	<div class="row">
 		<div class="col-sm-6">
-			<%= button_to "Retour aux produits", root_path, class: "btn btn-outline-secondary" %>
+			<%= button_to "Retour aux produits", root_path, method: :get, class: "btn btn-outline-secondary" %>
 		</div>
 		<div class="col-sm-6 text-right">
 			<div class="pb20">
