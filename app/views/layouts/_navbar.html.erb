@@ -77,16 +77,17 @@
 			<ul class="list-inline">
 				<li class="list-inline-item"><a href="javascript:void(0)" class="search-open"><i class="ti-search"></i></a></li>
 				<li class="list-inline-item">
-					<a href="#" class=" menu-btn">
-						<i class="ti-shopping-cart"></i>
-						<span class="badge badge-default">
-							<% if !session[:cart_id].nil? %>
-								<%= Cart.find(session[:cart_id]).items.count %>
-							<% else %>
-								0
-							<% end %>
-						</span>
-					</a>
+						<% if !session[:cart_id].nil? %>
+		 					 <%= link_to cart_path(session[:cart_id]) do %>
+		     			 	<i class="ti-shopping-cart"></i>
+		      			<span class="badge badge-default">
+		       			 <%= Cart.find(session[:cart_id]).items.count %>
+		      			</span>
+		 					 <% end %>
+						<% else %>
+		  				<i class="ti-shopping-cart"></i>
+		  				<span class="badge badge-default">0</span>
+						<% end %>
 				</li>
 			</ul>
 		</div><!--right nav icons-->

@@ -37,6 +37,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
+        Cart.find(session[:cart_id]).update_columns(user_id: nil)
         session.delete(:cart_id) #delete the cart_id of the current cookies, then will generate a new one automatically
         format.html { redirect_to new_charge_path(amount: @cart.total), notice: 'Commande validée.' }
         format.json { render :show, status: :created, location: @order }
