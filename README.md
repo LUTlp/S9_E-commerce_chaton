@@ -63,4 +63,4 @@ Features en plus
 
 ### La Team :
 
-:octocat: Fait avec amour à Paris par *Kabom, Laetitia, Julia et Perrine :octocat:
+:octocat: Fait avec amour par *Kabom, Laetitia, Julia et Perrine* :octocat:
