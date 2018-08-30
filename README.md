@@ -1,4 +1,4 @@
-# Un site d'e-commerce de vente de chats.
+# Un site d'e-commerce de vente de chats. :octocat:
  *en ligne sur Heroku* </br></br></br>
  https://ecommercechatonbnf.herokuapp.com/ 
  
@@ -65,4 +65,4 @@ Features en plus
 
 ### La Team :
 
-:octocat: Fait avec amour par *Kabom, Laetitia, Julia et Perrine* :octocat:
+ Fait avec amour par *Kabom, Laetitia, Julia et Perrine* :octocat:
