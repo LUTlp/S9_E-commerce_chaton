@@ -17,7 +17,11 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    if current_user.nil?
+      redirect_to new_user_registration_path, notice: "Vous devez être inscrit pour passer commande."
+    end
     @order = Order.new
+
   end
 
   # GET /orders/1/edit
