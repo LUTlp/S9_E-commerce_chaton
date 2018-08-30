@@ -11,7 +11,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'devise', '~> 4.5'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.1'
@@ -23,16 +22,17 @@ gem 'font-awesome-sass', '~> 5.3.1'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 	gem 'pry-rails', '~> 0.3.6'
+  gem 'dotenv-rails'
+
 end
 
-gem 'dotenv-rails', groups: [:development, :test]
-gem "letter_opener", :group => :development
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+  gem "letter_opener"
 end
 
 group :test do
