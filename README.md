@@ -11,15 +11,15 @@
 
 ### Navigation :
 
-- Landing page _____ page produit _____
-     |          |_____________________ |  ajouter au panier_____ panier
-     |                                                          |______ vider panier
-     |                                                          |______ supprimer produit
-     |                                                          |______ checkout 
-     |__________________________ Sign up, New order__________________________|
-     |                                 | Commande validée
-     |                                 | Historique des commandes
-     |____________________________________________ |                                               
+       - Landing page _____ page produit _____
+            |          |_____________________ |  ajouter au panier_____ panier
+            |                                                          |______ vider panier
+            |                                                          |______ supprimer produit
+            |                                                          |______ checkout 
+            |__________________________ Sign up, New order__________________________|
+            |                                 | Commande validée
+            |                                 | Historique des commandes
+            |____________________________________________ |                                               
 
 
 
