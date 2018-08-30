@@ -35,7 +35,7 @@
  - En tant que visiteur, je ne peux pas voir le panier de quiconque (.........?
  - En tant qu'utilisateur authentifié, je peux voir mon panier actuel (et le modifier ?.........?)
  - En tant qu'utilisateur, je peux passer une commande avec Stripe (.............?)
- - Le mailer envoie un email 
+ - Le mailer envoie un email  </br>
                             - à l'utilisateur </br>
                                      - lors de l'inscription </br>
                                      - d'une commande passée </br>
