@@ -67,4 +67,4 @@ Features en plus
 
 ### La Team :
 
- Fait avec amour par *Kabom, Laetitia, Julia et Perrine* :octocat:
+ Fait avec amour par *Kabom, Laëtitia, Julia et Perrine* :octocat:
