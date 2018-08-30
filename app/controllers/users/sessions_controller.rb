@@ -15,8 +15,8 @@ class Users::SessionsController < Devise::SessionsController
 
   # DELETE /resource/sign_out
   def destroy
-    super
-    session[:cart_id] = nil
+    super #to herit the destroy method already written in the gem
+    session[:cart_id] = nil #empty cookie
   end
 
   # protected
