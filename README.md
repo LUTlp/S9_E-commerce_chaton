@@ -32,7 +32,7 @@
  - en tant que visiteur, je peux login et signup
  - En tant qu'utilisateur authentifié, je peux faire tout ce que les visiteurs peuvent faire
  - En tant qu'utilisateur authentifié, je peux ajouter des produits à mon panier
- - En tant que visiteur, je ne peux pas voir le panier de quiconque (.........?
+ - En tant que visiteur, je ne peux pas voir le panier de quiconque (.........?)
  - En tant qu'utilisateur authentifié, je peux voir mon panier actuel (et le modifier ?.........?)
  - En tant qu'utilisateur, je peux passer une commande avec Stripe (.............?)
  - Le mailer envoie un email  </br>
@@ -66,9 +66,36 @@
  :sunny:   $ rails db:seed
 
 
+</br>
+==================================================================================================
+
+###Le Mailer:
+ 
+  - généré par ChatonMailer 
+  - les méthodes ” order_mail ” (=> envoi un mail lors d’une commande) et “welcome_mail” (=> envoi un mail au new subscriber).
+
+  - En local, on peut s’inscrire ou commander, cela ouvre une fenêtre letter-opener (qui est une simulation d’envoi en développement). 
+
+  - Les clefs sont cachées dans le doc .env grâce à la gem dotenv.
+
 
 </br>
+==================================================================================================
 
+### Template
+
+- Integration du template Assan
+
+> file:///Users/kabomyonghoua/Downloads/assan-kit-v3.7/index.html
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+</br>
 ==================================================================================================
 
 ### La Team :
