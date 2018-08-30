@@ -12,10 +12,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    binding.pry
     if !session[:cart_id].nil?
       Cart.find(session[:cart_id]).update_columns(user_id: current_user.id)
-    end    
+    end
   end
 
   # GET /resource/edit

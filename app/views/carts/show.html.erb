@@ -8,17 +8,20 @@
 	</div>
 </div>
 
+
+<p id="notice"><%= notice %></p>
+
 <div class="container pb60">
 	<h4 class="font300 mb30">
 		<div class="col">
   		<%= button_to "Vider le panier", @cart, method: :delete, data: {
    		confirm: "Êtes-vous sûr ?" }, class: "btn btn-dark float-right" %>
     </div>
-    
+
 		vous avez ... articles dans votre panier
-		
+
 	</h4>
-	 
+
 	<table class="table table-condensed cart-table mb40">
 		<thead>
 			<tr>
@@ -29,7 +32,7 @@
 				<th>Total</th>
 			</tr>
 		</thead>
-		
+
 		<tbody>
 			<% @cart.line_items.each do |ssss| %>
 			<tr>
@@ -39,26 +42,31 @@
 					<td class="product-name"><%= ssss.item.title %></td>
 					<td class="product-price"><%= number_to_currency(ssss.item.price, unit: "€", separator: ",", format: "%n %u") %></td>
 					<td class="product-quantity">(x <%= ssss.quantity %>)</td>
-						
+
 					<td class="product-total">
 						<span class="badge badge-info"><%= number_to_currency(ssss.total, unit: "€", separator: ",", format: "%n %u") %></span>
 					</td>
-				
+
 					<td class="product-delete"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove this item"><i class="fa fa-times"></i></a></td>
 			</tr>
 			<% end %>
 	 </tbody>
 	</table><hr class="mb40">
-	
+
 	<div class="row">
-		<div class="col-sm-6">		
+		<div class="col-sm-6">
 			<%= button_to "Retour aux produits", root_path, class: "btn btn-outline-secondary" %>
 		</div>
 		<div class="col-sm-6 text-right">
 			<div class="pb20">
 				<h3><small>Your Cart Total: <span class="badge badge-info"><%= number_to_currency(@cart.total, unit: "€", separator: ",", format: "%n %u") %></span></small></h3>
 			</div>
-			<a href="#" class="btn btn-primary" style="color:#fff;">Commander</a>
+
+      <div><%= button_to "Acheter", new_order_path, method: :get, class: "btn btn-primary" %></div>
+      
+      <!-- edit cart a voir si il faut le supprimer
+      < link_to 'Edit', edit_cart_path(@cart) >
+			-->	
 		</div>
 	</div>
 </div>
