@@ -61,9 +61,11 @@
 			<div class="pb20">
 				<h3><small>Your Cart Total: <span class="badge badge-info"><%= number_to_currency(@cart.total, unit: "€", separator: ",", format: "%n %u") %></span></small></h3>
 			</div>
+
 			<a href="#" class="btn btn-danger" style="color:#fff;">Checkout</a>
       <div><%= button_to "Acheter", new_order_path, method: :get, class: "btn btn-primary" %></div>
       <%= link_to 'Edit', edit_cart_path(@cart) %>
+
 		</div>
 	</div>
 </div>
