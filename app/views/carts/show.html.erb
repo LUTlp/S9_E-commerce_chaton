@@ -18,7 +18,7 @@
    		confirm: "Êtes-vous sûr ?" }, class: "btn btn-dark float-right" %>
     </div>
 
-		vous avez ... articles dans votre panier
+		Vous avez <%= @cart.line_items.count%> article(s) dans votre panier.
 
 	</h4>
 
@@ -47,7 +47,6 @@
 						<span class="badge badge-info"><%= number_to_currency(ssss.total, unit: "€", separator: ",", format: "%n %u") %></span>
 					</td>
 
-					<td class="product-delete"><%= link_to 'Supprimer', ssss.destroy, :confirm => "Are you sure?",:remote => true %><i class="fa fa-times"></i></td>
 			</tr>
 			<% end %>
 	 </tbody>
@@ -55,15 +54,14 @@
 
 	<div class="row">
 		<div class="col-sm-6">
-			<%= button_to "Retour aux produits", root_path, class: "btn btn-outline-secondary" %>
+			<%= button_to "Retour aux produits", root_path, method: :get, class: "btn btn-outline-secondary" %>
 		</div>
 		<div class="col-sm-6 text-right">
 			<div class="pb20">
 				<h3><small>Your Cart Total: <span class="badge badge-info"><%= number_to_currency(@cart.total, unit: "€", separator: ",", format: "%n %u") %></span></small></h3>
 			</div>
 
-			<a href="#" class="btn btn-danger" style="color:#fff;">Checkout</a>
-      <div><%= button_to "Acheter", new_order_path, method: :get, class: "btn btn-primary" %></div>
+      <div><%= button_to "Commander", new_order_path, method: :get, class: "btn btn-primary" %></div>
       <%= link_to 'Edit', edit_cart_path(@cart) %>
 
 		</div>
