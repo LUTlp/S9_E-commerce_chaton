@@ -1,6 +1,7 @@
 class Cart < ApplicationRecord
   has_many :line_items, dependent: :destroy #connect  cart and lineItem tables with 1-N relation
                         #if the linked cart is destroyed, the LineItem is destroy.
+  has_many :items, through: :line_items
   belongs_to :user, optional: true
 
   def add_product(item)

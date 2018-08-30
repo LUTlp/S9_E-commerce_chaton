@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   resources :carts
   resources :items
 
+  get 'items/show'
+  get '/items/:id', to: 'items#show'
+
+
 end
