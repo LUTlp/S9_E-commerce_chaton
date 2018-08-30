@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class OrdersControllerTest < ActionDispatch::IntegrationTest
+<<<<<<< HEAD
+  # test "the truth" do
+  #   assert true
+  # end
+=======
   setup do
     @order = orders(:one)
   end
@@ -45,4 +50,5 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to orders_url
   end
+>>>>>>> 333e9a2b269a356f5af9e0df4c9f54cd73d3c8ba
 end
