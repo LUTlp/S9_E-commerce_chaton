@@ -21,18 +21,19 @@
                     <p>
                       <%= @item.description%>
                      </p>
-                    <form method="post" class="pt20">
+                    <!-- <form method="post" class="pt20">
                         <h4><small>Quantity</small></h4>
                         <div class="quantity">
                             <input type="button" class="minus" value="-">
                             <input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                             <input type="button" class="plus" value="+">
                         </div>
-                        <button type="button" class="btn btn-primary btn-icon">Add to cart</button>
-                    </form>
+                    </form> -->
+                    <%= button_to 'Ajouter au panier', line_items_path(item_id: @item), class: 'btn btn-success' %>
+
                 </div>
             </div>
-            
+
             <div class="row pt70">
                 <div class="col-md-10 ml-auto mr-auto">
                     <div>

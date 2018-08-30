@@ -47,7 +47,7 @@
 						<span class="badge badge-info"><%= number_to_currency(ssss.total, unit: "€", separator: ",", format: "%n %u") %></span>
 					</td>
 
-					<td class="product-delete"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove this item"><i class="fa fa-times"></i></a></td>
+					<td class="product-delete"><%= link_to 'Supprimer', ssss.destroy, :confirm => "Are you sure?",:remote => true %><i class="fa fa-times"></i></td>
 			</tr>
 			<% end %>
 	 </tbody>

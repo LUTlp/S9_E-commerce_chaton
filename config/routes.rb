@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'items/show'
   get '/items/:id', to: 'items#show'
+  delete 'line_items/:id' => "line_items#destroy"
 
 
 end
