@@ -1,6 +1,19 @@
 Rails.application.configure do
+
+  # Letter Opener
+  config.action_mailer.delivery_method = :letter_opener
+
+  LetterOpener.configure do |config| # mails stockés dans /tmp/letter_opener
+  config.location = Rails.root.join('tmp', 'my_mails') 
+  config.message_template = :light # afficher version light 
+  end                              # = juste le body (sans les métas/style)
+  
+
   # Settings specified here will take precedence over those in config/application.rb.
-config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_options = {from: 'no-reply@example.com'}
+  config.action_mailer.perform_deliveries = true
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.

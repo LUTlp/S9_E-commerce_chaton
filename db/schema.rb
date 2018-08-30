@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_29_123145) do
+ActiveRecord::Schema.define(version: 2018_08_29_194416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2018_08_29_123145) do
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -39,6 +40,17 @@ ActiveRecord::Schema.define(version: 2018_08_29_123145) do
     t.index ["item_id"], name: "index_line_items_on_item_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "address", null: false
+    t.string "email", null: false
+    t.integer "status", default: 0, null: false
+    t.bigint "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_orders_on_cart_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -48,11 +60,11 @@ ActiveRecord::Schema.define(version: 2018_08_29_123145) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address"
-    t.integer "cart_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "items"
+  add_foreign_key "orders", "carts"
 end
