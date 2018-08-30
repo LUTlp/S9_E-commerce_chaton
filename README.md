@@ -32,13 +32,19 @@
  - en tant que visiteur, je peux login et signup
  - En tant qu'utilisateur authentifié, je peux faire tout ce que les visiteurs peuvent faire
  - En tant qu'utilisateur authentifié, je peux ajouter des produits à mon panier
- - En tant que visiteur, je ne peux pas voir le panier de quiconque (.........?)
+ - En tant que visiteur, je ne peux pas voir le panier de quiconque (.........?
  - En tant qu'utilisateur authentifié, je peux voir mon panier actuel (et le modifier ?.........?)
  - En tant qu'utilisateur, je peux passer une commande avec Stripe (.............?)
- - En tant qu'administrateur du site, je peux recevoir des emails pour m'avertir d'une commande passée (.....?)
+ - Le mailer envoie un email 
+                            - à l'utilisateur 
+                                     - lors de l'inscription
+                                     - d'une commande passée
+                            - à l'administrateur
+                                     - d'une commande passée
+                                              
  - En tant qu'utilisateur, je peux modifier mes informations de base
  
-Features en plus
+#### Features en plus
 
  - En tant que visiteur je peux avoir un panier
  - En tant qu'utilisateur je peux acheter plusieurs exemplaires d'un produit
