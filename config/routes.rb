@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
   resources :orders
-  root 'items#index'  
+  root 'items#index'
 
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
-  }  
+  }
 
   resources :line_items
   resources :carts
@@ -14,6 +14,5 @@ Rails.application.routes.draw do
 
   get 'items/show'
   get '/items/:id', to: 'items#show'
-
 
 end
