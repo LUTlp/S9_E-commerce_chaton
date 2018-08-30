@@ -10,8 +10,16 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+
+
+  resources :users, :only => [:index, :show]
+
   resources :line_items
   resources :carts
   resources :items
 
+
+
+
+end
 
