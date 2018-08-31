@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
   before_action :redirect_if_cart_is_empty, only: :new
@@ -83,4 +84,5 @@ class OrdersController < ApplicationController
         redirect_to root_url, notice: "Votre panier est vide."
       end
     end
+
 end

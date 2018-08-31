@@ -54,16 +54,15 @@
 
 	<div class="row">
 		<div class="col-sm-6">
-			<%= button_to "Retour aux produits", root_path, method: :get, class: "btn btn-outline-secondary" %>
+			<%= button_to "Retour à l'accueil", root_path, method: :get, class: "btn btn-outline-secondary" %>
 		</div>
 		<div class="col-sm-6 text-right">
 			<div class="pb20">
 				<h3><small>Your Cart Total: <span class="badge badge-info"><%= number_to_currency(@cart.total, unit: "€", separator: ",", format: "%n %u") %></span></small></h3>
 			</div>
 
-      <div><%= button_to "Commander", new_order_path, method: :get, class: "btn btn-primary" %></div>
-      <%= link_to 'Edit', edit_cart_path(@cart) %>
-
+      <div><%= button_to "Acheter", new_order_path, method: :get, class: "btn btn-primary" %></div>
+    
 		</div>
 	</div>
 </div>

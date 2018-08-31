@@ -3,7 +3,8 @@
             <div class='row align-items-center'>
                 <div class='col-md-7'>
                     <div id="thumbnail">
-                 <img src="<%=@item.image_url%>", size: "600x333", alt: "p1">                    </div>
+                 			<img src="<%=@item.image_url%>">
+                    </div>
                 </div>
                 <div class='col-md-5'>
                   <h2><%= @item.title%></h2>
@@ -41,8 +42,7 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs tabs-default justify-content-center mb30" role="tablist">
                             <li class="nav-item" role="presentation"><a class="active nav-link" href="#t3" aria-controls="#t3" role="tab" data-toggle="tab"> Description</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#t4" aria-controls="#t4" role="tab" data-toggle="tab"> Additional Information</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#t5" aria-controls="#t5" role="tab" data-toggle="tab"> Feedback <sup>2</sup></a></li>
+                           
                         </ul>
 
                         <!-- Tab panes -->
@@ -50,6 +50,7 @@
                             <div role="tabpanel" class="tab-pane active show fade" id="t3">
                                 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
                             </div>
+
                             <div role="tabpanel" class="tab-pane fade" id="t4">
                                 <table class="table table-striped">
                                     <tbody>
@@ -196,6 +197,7 @@
 
                                     </div><!-- end .smart-forms section -->
                             </div>
+
                         </div>
                     </div>
                 </div>

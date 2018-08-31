@@ -3492,8 +3492,8 @@ Footer styles
     position: absolute;
     top: 0;
     left: 0;
-    content: "\f105";
-    font-family: 'FontAwesome'; }
+    content: ">";
+     }
   .footer-list-item li a {
     color: rgba(255, 255, 255, 0.8); }
     .footer-list-item li a:hover {
