@@ -18,7 +18,7 @@
    		confirm: "Êtes-vous sûr ?" }, class: "btn btn-dark float-right" %>
     </div>
 
-		vous avez ... articles dans votre panier
+		Vous avez <%= @cart.line_items.count%> article(s) dans votre panier.
 
 	</h4>
 
@@ -47,7 +47,6 @@
 						<span class="badge badge-info"><%= number_to_currency(ssss.total, unit: "€", separator: ",", format: "%n %u") %></span>
 					</td>
 
-					<td class="product-delete"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove this item"><i class="fa fa-times"></i></a></td>
 			</tr>
 			<% end %>
 	 </tbody>
@@ -63,10 +62,7 @@
 			</div>
 
       <div><%= button_to "Acheter", new_order_path, method: :get, class: "btn btn-primary" %></div>
-      
-      <!-- edit cart a voir si il faut le supprimer
-      < link_to 'Edit', edit_cart_path(@cart) >
-			-->	
+    
 		</div>
 	</div>
 </div>
